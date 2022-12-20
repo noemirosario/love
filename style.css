@@ -1,0 +1,335 @@
+body{
+  margin: 0px;
+  background: #BAABDA;
+  font-family: "Comic Sans MS";
+  font-weight: 900;
+}
+
+.box {
+  width: 600px;
+  height: 700px;
+  background: #FFB3B3;
+  margin: 0 auto;
+  margin-top: 35px;
+  color: rgb(20, 19, 19);
+  text-align: center;
+  border-radius: 34px;
+}
+
+.box1 {
+  width: 600px;
+  height: 650px;
+  background: #C9BBCF;
+  margin: 0 auto;
+  margin-top: 35px;
+  color: rgb(20, 19, 19);
+  text-align: center;
+  border-radius: 34px;
+}
+
+section {
+  display: block; 
+}
+
+.space {
+  margin:0 auto;
+}
+
+.img1{
+  padding-top: 20px;
+}
+
+h1{
+  padding-bottom: 10px;
+  padding-top: 50px;
+
+  
+}
+
+/*****************************************************************************/
+.bubbly-button {
+    font-family: "Comic Sans MS", sans-serif;
+    display: inline-block;
+    font-size: 1em;
+    font-weight: 900;
+    padding: 1em 2em;
+    margin-top: 50px;
+    margin-bottom: 60px;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #FFE1E1;
+    color: black;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+    box-shadow: 0 2px 25px rgba(255, 0, 130, 0.5);
+}
+
+.bubbly-button:focus {
+    outline: 0;
+  }
+  .bubbly-button:before, .bubbly-button:after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 140%;
+    height: 100%;
+    left: -20%;
+    z-index: -1000;
+    transition: all ease-in-out 0.5s;
+    background-repeat: no-repeat;
+  }
+  .bubbly-button:before {
+    display: none;
+    top: -75%;
+    background-image: radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, transparent 20%, #ff0081 20%, transparent 30%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, transparent 10%, #ff0081 15%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%);
+    background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+  }
+  .bubbly-button:after {
+    display: none;
+    bottom: -75%;
+    background-image: radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, transparent 10%, #ff0081 15%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%);
+    background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+  }
+  .bubbly-button:active {
+    transform: scale(0.9);
+    background-color: #e60074;
+    box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+  }
+  .bubbly-button.animate:before {
+    display: block;
+    animation: topBubbles ease-in-out 0.75s forwards;
+  }
+  .bubbly-button.animate:after {
+    display: block;
+    animation: bottomBubbles ease-in-out 0.75s forwards;
+  }
+  
+/*****************************************************************************/
+
+.container{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1;
+  margin: 0px;
+  font-size: 0px;
+  padding: 0px;
+}
+
+.col{
+  display:inline-block;
+  width: 19%;
+}
+
+.heart{
+  /*content*/
+  width: 150px;
+  height: 150px;
+  position: relative;
+  top: 120vh;
+  z-index:-1;
+}
+
+.circle{
+  /*circle2*/
+  width:90px;
+  height:90px;
+  content:'';
+  background-color: #68A7AD;
+  position: absolute;
+  margin: 35px 0px 0px 30px;
+  transform: rotate(-135deg);
+}
+
+.circle::after{
+  /*square*/
+  width: 90px;
+  height: 90px;
+  content:'';
+  background-color: #68A7AD;
+  border-radius: 45px;
+  position: absolute;
+  margin: 44px 0px;
+}
+
+.circle::before{
+  /*circle1*/
+  width: 90px;
+  height: 90px;    
+  content:'';
+  background-color: #68A7AD;
+  position: absolute;
+  z-index: 1;
+  margin: 0px 44px;
+  border-radius: 45px;
+}
+/******************************/
+.heart.heart1 .circle{
+  animation: 12s colors infinite;
+  animation-delay: 0s;
+}
+.heart.heart1 .circle::before{
+  animation: 12s colors infinite;
+  animation-delay: 0s;
+}
+.heart.heart1 .circle::after{
+  animation: 12s colors infinite;
+  animation-delay: 0s;
+}
+
+
+.heart.heart2 .circle{
+  animation: 12s colors infinite;
+  animation-delay: 3s;
+}
+.heart.heart2 .circle::before{
+  animation: 12s colors infinite;
+  animation-delay: 3s;
+}
+.heart.heart2 .circle::after{
+  animation: 12s colors infinite;
+  animation-delay: 3s;
+}
+
+.heart.heart3 .circle{
+  animation: 12s colors infinite;
+  animation-delay: 6s;
+}
+.heart.heart3 .circle::before{
+  animation: 12s colors infinite;
+  animation-delay: 6s;
+}
+.heart.heart3 .circle::after{
+  animation: 12s colors infinite;
+  animation-delay: 6s;
+}
+
+.heart.heart4 .circle{
+  animation: 12s colors infinite;
+  animation-delay: 9s;
+}
+.heart.heart4 .circle::before{
+  animation: 12s colors infinite;
+  animation-delay: 9s;
+}
+.heart.heart4 .circle::after{
+  animation: 12s colors infinite;
+  animation-delay: 9s;
+}
+
+.heart.heart5 .circle{
+  animation: 12s colors infinite;
+  animation-delay: 5s;
+}
+.heart.heart5 .circle::before{
+  animation: 12s colors infinite;
+  animation-delay: 5s;
+}
+.heart.heart5 .circle::after{
+  animation: 12s colors infinite;
+  animation-delay: 5s;
+}
+
+
+@keyframes colors{
+  0%{     
+     background-color: #E5CB9F;
+  }
+  25%{
+    background-color: #F9CEEE;
+  }
+  50%{
+    background-color: #97C4B8;
+  }
+  75%{
+    background-color: #AC7D88;
+  }
+  100%{
+    background-color: #D77FA1;
+  }
+}
+/******************************/
+.halfMoon{
+  background: transparent;
+  height: 90px;
+  width: 45px;
+  position: absolute;
+  border-radius: 76px 0px 0px 0px;
+  margin: 82px 81px;
+  transform: rotate(45deg);
+}
+.halfMoon::before{
+  height: 90px;
+  width: 45px;
+  border-radius: 76px 0px 0px 0px;
+  content: '';
+  position: absolute;
+  margin: 45px -40px;
+  transform: rotate(78.5deg);
+}
+
+.halfMoon::after{
+
+  height: 90px;
+  width: 45px;
+  border-radius: 0px 0px 0px 76px;  
+  content: '';
+  margin: 3px 7px;
+  position: absolute;  
+  transform: rotate(369deg);
+}
+
+.heart1{
+  animation: 20s Linear-motion infinite,MoveLeft 23s infinite;
+  animation-delay: 5s;
+}
+
+.heart2{
+  animation: 12s Linear-motion infinite, MoveLeft 15s infinite;
+  animation-delay: 1s;
+}
+
+.heart3{
+  animation: 12s Linear-motion infinite, MoveLeft 15s infinite;
+  animation-delay: 18s;
+}
+
+.heart4{
+  animation: 16s Linear-motion infinite, MoveLeft 19s infinite;
+  animation-delay: 11s;
+}
+
+.heart5{
+  animation: 15s Linear-motion infinite, MoveLeft 18s infinite;
+  animation-delay: 5s;
+}
+
+@keyframes Linear-motion{
+  0%{     
+    top:100vh;
+  }
+  100%{
+    top:-20vh;
+  }
+}
+
+@keyframes MoveLeft{
+  0%{
+    margin-left: 0%;
+  }
+  50%{
+    margin-left:50%;
+  }
+  100%{
+    margin-left: 0%;
+  }
+}
+
+
+
